@@ -52,12 +52,7 @@ export class SettingsPage {
           handler: data => {
             console.log('Send clicked');
             let toast = this.alertctrl.create({
-              message: 'Password Changed successfully',
-              duration: 300,
-              position: 'top',
-              cssClass: 'dark-trans',
-              closeButtonText: 'OK',
-              showCloseButton: true
+              message: 'Password Changed successfully',    
             });
             toast.present();
           }
