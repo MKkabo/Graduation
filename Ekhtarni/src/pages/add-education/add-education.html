@@ -1,0 +1,60 @@
+<!--
+  Generated template for the AddEducationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>add-education</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+  <form (ngSubmit)="submitForm(f)" #f="ngForm">
+      <ion-list>
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="person" item-start class="text-primary"></ion-icon>
+              School Name
+            </ion-label>
+            <ion-input type="text" name="school_name" ngModel #school_name="ngModel" required></ion-input>
+          </ion-item>
+    
+    
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="person" item-start class="text-primary"></ion-icon>
+              Degree
+            </ion-label>
+            <ion-input type="text" name="degree" ngModel #degree="ngModel" required></ion-input>
+          </ion-item>
+      
+          <ion-item>
+                <ion-label>Start Date</ion-label>
+                <ion-datetime display-format="MM/YYYY" name="startDate" pickerFormat="M YYYY" min="1900" max="2020" #start ngModel (ionChange)="setDate('start',start)"></ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-label>End Date</ion-label>
+                <ion-datetime display-format="MM/YYYY" name="endDate" pickerFormat="M YYYY" min="1900" max="2020" #end ngModel (ionChange)="setDate('end',end.value)"></ion-datetime>
+            </ion-item>
+    
+        </ion-list>
+    
+        <div margin-top>
+            <button ion-button color="blue" type="submit" block [disabled]="!f.valid">Submit</button>
+        </div>
+      
+  </form>
+
+    <!-- <ion-item>
+        <ion-label>Date</ion-label>
+        <ion-datetime pickerFormat="M YYYY" min="1900" max="2020" [(ngModel)]="dates.test" #test (ionChange)="setDate('test',test._text)"></ion-datetime>
+    </ion-item> -->
+
+</ion-content>

@@ -1,0 +1,56 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>edit-experience</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content padding>
+
+  <form (ngSubmit)="submitForm(f)" #f="ngForm">
+      <ion-list>
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="person" item-start class="text-primary"></ion-icon>
+              Job Title
+            </ion-label>
+            <ion-input type="text" name="job_title" [(ngModel)]="experience.job_title" #job_title="ngModel" required></ion-input>
+          </ion-item>
+    
+    
+          <ion-item>
+            <ion-label floating>
+              <ion-icon name="person" item-start class="text-primary"></ion-icon>
+              Company Name
+            </ion-label>
+            <ion-input type="text" name="company_name" [(ngModel)]="experience.company_name" #company_name="ngModel" required></ion-input>
+          </ion-item>
+          
+          <ion-item>
+           <ion-label floating>
+             <ion-icon name="person" item-start class="text-primary"></ion-icon>
+             Description
+            </ion-label>
+            <ion-textarea rows="6" cols="20" placeholder="Description" name="description" [(ngModel)]="experience.description" #description="ngModel" required></ion-textarea>
+          </ion-item>
+
+          <ion-item>
+                <ion-label>Start Date</ion-label>
+                <ion-datetime display-format="MM/YYYY" name="startDate" pickerFormat="M YYYY" min="1900" max="2020" #start [(ngModel)]="experience.startDate"></ion-datetime>
+            </ion-item>
+            <ion-item>
+                <ion-label>End Date</ion-label>
+                <ion-datetime display-format="MM/YYYY" name="endDate" pickerFormat="M YYYY" min="1900" max="2020" #end [(ngModel)]="experience.endDate"></ion-datetime>
+            </ion-item>
+    
+        </ion-list>
+    
+        <div margin-top>
+            <button ion-button color="blue" type="submit" block [disabled]="!f.valid">Submit</button>
+        </div>
+  </form>  
+
+</ion-content>

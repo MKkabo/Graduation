@@ -1,0 +1,38 @@
+ <ion-header>
+
+  <ion-navbar>
+    <ion-title>Rate and Review</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+
+ <ion-card class="card">
+   <h1 text-center padding>Rate this Course</h1>
+  <ionic3-star-rating text-center
+    activeIcon = "star"
+    defaultIcon = "star-outline"
+    activeColor = "#1c72a5" 
+    defaultColor = "#222"
+    readonly="false"
+    [rating]="rating">
+  </ionic3-star-rating>
+
+ 
+  <ion-item> 
+     <ion-label text-center padding>Tell Us your Feedback?</ion-label>
+  </ion-item>
+<ion-textarea placeholder="Enter your Review" text-center [(ngModel)]="description"></ion-textarea>
+
+  <button ion-button fill="outline" full (click)="submitRate()">Submit</button>
+</ion-card>
+
+
+
+
+  
+</ion-content>

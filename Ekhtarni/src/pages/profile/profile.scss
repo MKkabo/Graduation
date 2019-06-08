@@ -1,0 +1,35 @@
+page-profile {
+    
+    .cover{
+        background-image:url("../assets/img/cover.png");
+        background-image: no-repeat;
+        
+        img {
+            max-width: 140px;
+            border-radius: 50%;
+            width: 140px;
+            height: 140px;
+            margin-top: 20%;
+        }
+    }
+
+    .edu{
+
+       
+           ion-title ion-button {
+                float: right;  
+                display: inline;
+            }
+    }
+
+
+
+    .exp{
+
+
+
+
+    }
+
+
+}

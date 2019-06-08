@@ -1,0 +1,53 @@
+<!--
+  Generated template for the EditEducationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>edit-education</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <form (ngSubmit)="submitForm(f)" #f="ngForm">
+        <ion-list>
+            <ion-item>
+              <ion-label floating>
+                <ion-icon name="person" item-start class="text-primary"></ion-icon>
+                School Name
+              </ion-label>
+              <ion-input type="text" name="school_name" [(ngModel)]="education.school_name" #school_name="ngModel" required></ion-input>
+            </ion-item>
+      
+      
+            <ion-item>
+              <ion-label floating>
+                <ion-icon name="person" item-start class="text-primary"></ion-icon>
+                Degree
+              </ion-label>
+              <ion-input type="text" name="degree" [(ngModel)]="education.degree" #degree="ngModel" required></ion-input>
+            </ion-item>
+        
+            <ion-item>
+                  <ion-label>Start Date</ion-label>
+                  <ion-datetime display-format="MM/YYYY" name="startDate" pickerFormat="M YYYY" min="1900" max="2020" #start [(ngModel)]="education.startDate"></ion-datetime>
+              </ion-item>
+              <ion-item>
+                  <ion-label>End Date</ion-label>
+                  <ion-datetime display-format="MM/YYYY" name="endDate" pickerFormat="M YYYY" min="1900" max="2020" #end [(ngModel)]="education.endDate"></ion-datetime>
+              </ion-item>
+      
+          </ion-list>
+      
+          <div margin-top>
+              <button ion-button color="blue" type="submit" block [disabled]="!f.valid">Submit</button>
+          </div>
+    </form>  
+
+</ion-content>

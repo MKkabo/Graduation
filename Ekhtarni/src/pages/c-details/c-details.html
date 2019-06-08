@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>
+      Details
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ng-template [ngIf]="course">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+        </ion-col>
+        <ion-col text-right>
+          <span class="rate-col">
+            {{ randRate }}
+          </span>
+          <!-- <ion-icon name="star" color="danger" class="icon-star"></ion-icon> -->
+          <!--{{Rate ****}}--->
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+    <h1>{{ course.name }}</h1>
+    <div class="p">
+    <p>Catergory: {{ course.category }}</p>
+    <p>Location: {{ course.location }}</p>
+    <p> Duration: {{ course.duration }} {{ course.duration > 1 ? 'weeks' : 'week'  }}</p>
+    </div>
+    <ion-list>
+      <ion-item>
+        <ion-label text-center>About this course</ion-label>
+      </ion-item>
+    <div class="p2">
+      <p text-center text-wrap>{{ course.about }}</p>
+    </div>
+      <ion-item></ion-item>
+      <ion-item text-center>
+        <button ion-button (click)="rate()">Rate Course</button>
+      </ion-item>
+    </ion-list>
+  </ng-template>
+
+</ion-content>

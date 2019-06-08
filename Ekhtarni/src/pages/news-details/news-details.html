@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="primary" >
+    <button ion-button menuToggle>
+      <ion-icon name="menu" ></ion-icon>
+    </button>
+    <ion-title text-center>News</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ng-template [ngIf]="newsfeeds"> 
+  <ion-card *ngFor="let newsfeed of newsfeeds"> 
+    <ion-card-content>
+        <ion-item>
+          <img src="http://localhost:3000/{{ newsfeed.image }}">
+          </ion-item>
+    
+     <p  text-wrap>{{ newsfeed.body }}</p>
+   
+    </ion-card-content>
+  </ion-card>
+</ng-template>
+</ion-content>

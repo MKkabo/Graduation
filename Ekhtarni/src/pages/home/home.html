@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>Home</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="presentPopover($event)">
+        <ion-badge color="danger">1</ion-badge>
+        <ion-icon name="notifications"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <!-- <ion-toolbar>
+    <ion-segment>
+      <ion-segment-button value="Jobs" (click)="show(jobDetailsPage)">
+        Jobs
+      </ion-segment-button>
+      <ion-segment-button value="News" (click)="show(jobDetailsPage)">
+        NEWS
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+ -->
+</ion-header>
+
+
+<ion-content>
+  <ng-template [ngIf]="jobs">
+    <ion-list>
+      <ion-grid>
+        <ion-row align-items-stretch>
+          <ion-col>
+            <ion-card class="card" *ngFor="let job of jobs">
+              <ion-toolbar color="danger">
+                <ion-title text-center>Job Opportunity</ion-title>
+              </ion-toolbar>
+              <ion-card-header>
+                <ion-item lines="none">
+                  <ion-avatar slot="start">
+                    <img src="../assets/img/cm.png">
+
+                    <h1>{{ job.company_name }}</h1>
+                  </ion-avatar>
+                </ion-item>
+              </ion-card-header>
+
+              <ion-card-content>
+                <ion-list>
+                  <ion-item>
+                    <h2>Job Title : {{ job.job_title }}</h2>
+                  </ion-item>
+                  <ion-item>
+                    <h2>Job Field : {{ job.job_field }}</h2>
+                  </ion-item>
+                </ion-list>
+              </ion-card-content>
+              <button fill="clear" full color="primary" ion-button (click)="onLoad(job)">
+                View
+              </button>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+
+  </ng-template>
+</ion-content>

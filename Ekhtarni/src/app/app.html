@@ -1,0 +1,55 @@
+<ion-nav [root]="rootPage" #nav></ion-nav>
+<ion-menu [content]="nav">
+  <ion-header>
+
+    <ion-toolbar class="user-profile">
+
+      <ion-grid>
+        <ion-row *ngIf="user">
+          <ion-col col-4>
+            <div class="user-avatar">
+              <img src="http://localhost:3000/{{ user.image }}">
+            </div>
+          </ion-col>
+          <ion-col padding-top col-8>
+            <h2 ion-text class="no-margin bold text-white">
+              {{ user.name }}
+            </h2>
+            <span ion-text color="light">Applicant</span>
+          </ion-col>
+        </ion-row>
+
+        <ion-row no-padding class="other-data">
+          <ion-col no-padding class="column">
+            <button ion-button icon-left small full color="light" menuClose (click)="onLoad(profilePage)">
+              <ion-icon name="contact"></ion-icon>
+              Profile
+            </button>
+          </ion-col>
+          <ion-col no-padding class="column">
+            <button ion-button icon-left small full color="light" menuClose (click)="logout()">
+              <ion-icon name="log-out"></ion-icon>
+              Log Out
+            </button>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-content>
+    <ion-list>
+      <button ion-item (click)="onLoad(SettingsPage)">
+        <ion-icon name="settings" item-left></ion-icon>
+        Settings
+      </button>
+      <button ion-item (click)="onLoad(AboutPage)">
+        <ion-icon name="md-information-circle" item-left></ion-icon>
+        About Us
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>

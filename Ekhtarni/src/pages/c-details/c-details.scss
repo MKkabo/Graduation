@@ -1,0 +1,38 @@
+page-c-details {
+
+
+
+  .p{
+    padding-top: 3%;
+    padding-left: 5%;
+    font-size: 16px;
+  }
+  .p2{
+    font-size: 16px;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: justify;
+  }
+  
+    .icon-star {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        font-size: 35px;
+        transition: transform 0.3s ease;
+      }
+    
+      .col span.rate-col {
+        background-color: rgb(28, 114, 165);
+        padding: .5rem 1.25rem;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+      }
+      h1{
+
+        color: #1c72a5;
+      }
+      
+}

@@ -1,0 +1,95 @@
+<!--
+  Generated template for the EditProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>edit-profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form (ngSubmit)="submitForm(f)" #f="ngForm">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="person" item-start class="text-primary"></ion-icon>
+          First Name
+        </ion-label>
+        <ion-input type="text" name="first_name" [(ngModel)]="profile.first_name" #first_name="ngModel" required></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="person" item-start class="text-primary"></ion-icon>
+          Last Name
+        </ion-label>
+        <ion-input type="text" name="last_name" [(ngModel)]="profile.last_name" #last_name="ngModel" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="person" item-start class="text-primary"></ion-icon>
+          Address
+        </ion-label>
+        <ion-input type="text" name="address" [(ngModel)]="profile.address" #address="ngModel" required></ion-input>
+      </ion-item>
+
+
+
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="person" item-start class="text-primary"></ion-icon>
+          Birth Date
+        </ion-label>
+        <ion-input type="text" name="birthdate" [(ngModel)]="profile.birthdate" #birthdate="ngModel" required></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+          <ion-label floating>
+            <ion-icon name="person" item-start class="text-primary"></ion-icon>
+            Phone
+          </ion-label>
+          <ion-input type="text" name="phone" [(ngModel)]="profile.phone" #phone="ngModel" required></ion-input>
+        </ion-item>
+  
+      <ion-item>
+        <ion-label floating>
+          <ion-icon name="person" item-start class="text-primary"></ion-icon>
+          Featured Skills
+        </ion-label>
+        <ion-input type="text" name="featured_skills" [(ngModel)]="profile.featured_skills" #featured_skills="ngModel" required></ion-input>
+      </ion-item>
+
+
+      <!-- <ion-item>
+        <ion-label floating>
+          <ion-icon name="person" item-start class="text-primary"></ion-icon>
+          Profile Pic.
+        </ion-label>
+        <ion-input type="file" name="image" ngModel #image="ngModel" required (change)="choosePhoto($event)">
+        </ion-input>
+      </ion-item> -->
+
+
+    <p text-center ion-text color="secondary">which field you may be interested in?</p>
+
+      <ion-item *ngFor="let entry of interests">
+        <ion-label>{{entry.val}}</ion-label>
+        <ion-checkbox slot="end" [(ngModel)]="entry.isChecked" name="{{ entry.val }}"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <div margin-top>
+      <button ion-button color="blue" type="submit" block [disabled]="!f.valid">Submit</button>
+    </div>
+
+  </form>
+</ion-content>

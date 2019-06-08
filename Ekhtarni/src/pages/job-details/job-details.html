@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Job-Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+    
+    <ng-template [ngIf]="job">
+<div class="about-header">
+  <img src="http://localhost:3000/{{ job.image }}">
+</div>
+<div padding class="about-info">
+  <ion-item-divider color="primary">
+    <ion-label>
+      <h4 text-center>{{ job.company_name }}</h4>
+    </ion-label>
+  </ion-item-divider>
+
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary">Job Title :</ion-label>
+      <ion-label text-wrap> {{ job.job_title }}</ion-label>
+    </ion-item>
+
+    <ion-item> 
+      <ion-label color="primary">Field :</ion-label>
+      <ion-label text-wrap>{{ job.job_field }}</ion-label>
+    </ion-item>
+    <ion-item> 
+      <ion-label  color="primary">Location :</ion-label>
+      <ion-label text-wrap>{{ job.location }} </ion-label>
+    </ion-item>
+  </ion-list>
+   
+    <ion-label   color="primary">Requirments :</ion-label>
+   
+    <pre>{{ job.requirements }}</pre>
+    <ion-label   color="primary">About Job :</ion-label>
+  <p text-wrap>
+    {{ job.about }}
+  </p>
+</div>
+</ng-template>
+
+
+
+</ion-content>
