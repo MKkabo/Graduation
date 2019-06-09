@@ -176,7 +176,6 @@
       <ion-card-content>
 
         <ion-list>
-          <!-- {{ interests | json }} -->
           <ion-item *ngFor="let int of user.interests.split(',')">
             <ion-label text-wrap>
               {{ int }}
@@ -199,5 +198,4 @@
       </ion-card-content>
     </ion-card>
   </ng-template>
-
 </ion-content>
