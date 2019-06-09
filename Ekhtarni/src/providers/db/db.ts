@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class DbProvider {
-  base_url: string = 'http://localhost:3000/api'
+  base_url: string = 'http://192.168.1.7:3000/api'
   data: any[];
   user: any;
   constructor(public http: HttpClient, private store: StoreProvider) {
