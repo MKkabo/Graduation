@@ -1,3 +1,4 @@
+import { PaymentPage } from './../pages/payment/payment';
 import { EditExperiencePage } from './../pages/edit-experience/edit-experience';
 import { AddEducationPage } from './../pages/add-education/add-education';
 import { AddExperiencePage } from './../pages/add-experience/add-experience';
@@ -52,7 +53,8 @@ import { EditEducationPage } from '../pages/edit-education/edit-education';
     AddExperiencePage,
     AddEducationPage,
     EditEducationPage,
-    EditExperiencePage
+    EditExperiencePage,
+    PaymentPage
   ],
   imports: [
     BrowserModule,
@@ -84,7 +86,8 @@ import { EditEducationPage } from '../pages/edit-education/edit-education';
     AddExperiencePage,
     AddEducationPage,
     EditEducationPage,
-    EditExperiencePage
+    EditExperiencePage,
+    PaymentPage
   ],
   providers: [
     StatusBar,

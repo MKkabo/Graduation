@@ -1,3 +1,4 @@
+import { PaymentPage } from './../payment/payment';
 import { StoreProvider } from './../../providers/store/store';
 import { LoginPage } from './../login/login';
 import { Component } from '@angular/core';
@@ -13,7 +14,9 @@ import { DbProvider } from '../../providers/db/db';
   templateUrl: 'register.html',
 })
 export class RegisterPage {
+ 
   constructor(public navCtrl: NavController, public navParams: NavParams, public db: DbProvider, public store: StoreProvider) {
+   
   }
 
   // register and go to home page
@@ -33,5 +36,8 @@ export class RegisterPage {
    */
   login() {
     this.navCtrl.setRoot(LoginPage);
+  }
+  payment(){
+    this.navCtrl.push(PaymentPage);
   }
 }

@@ -31,18 +31,31 @@
         </ion-label>
         <ion-input type="password" name="password" #password="ngModel" ngModel required></ion-input>
       </ion-item>
-
-
+      <ion-grid radio-group> 
+        <ion-row>
+          <ion-col col-md-3>  
+            <div class="acc">
+              <ion-label color="primary">Free  <ion-radio  name="free" value="free" slot="start"  checked="true"></ion-radio>
+              </ion-label>
+            </div>
+          </ion-col>
+          <ion-col col-md-3 offset-md-3>
+           <div class="acc">
+             <ion-label color="primary">Premium  <ion-radio name="pri" value="pri" slot="start" (click)="payment()"></ion-radio>
+            </ion-label>
+          </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
       <div margin-top>
         <button ion-button block color="blue" tappable [disabled]="!f.valid">
           SIGN UP
         </button>
       </div>
     </form>
-
-
+   
     <!-- Other links -->
-    <div text-center margin-top>
+    <div text-center margin-top class="link">
       <span ion-text color="secondary" tappable (click)="login()">I have an account</span>
     </div>
 
