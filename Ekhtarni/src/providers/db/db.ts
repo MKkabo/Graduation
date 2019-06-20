@@ -101,6 +101,10 @@ export class DbProvider {
     return this.http.post(`${this.base_url}/education/edit/${id}`, body);
   }
 
+  deleteExperience(id) {
+    
+    return this.http.delete(`${this.base_url}/experience/remove/${id}`);
+  }
 
   rateCourse(body) {
     return this.http.post(`${this.base_url}/rate/add`, body);

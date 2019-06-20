@@ -91,7 +91,7 @@ router.delete('/remove/:id', (req, res, next) => {
     let id = req.params.id;
 
     let sql = `DELETE FROM experience WHERE id=${id}`;
-
+    
     db.query(sql, (err, result) => {
         if (err) throw err;
         if (result['affectedRows'] === 1) {

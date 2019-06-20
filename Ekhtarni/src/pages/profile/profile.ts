@@ -1,3 +1,4 @@
+import { TabsPage } from './../tabs/tabs';
 import { EditExperiencePage } from './../edit-experience/edit-experience';
 import { AddEducationPage } from './../add-education/add-education';
 import { AddExperiencePage } from './../add-experience/add-experience';
@@ -65,6 +66,14 @@ export class profilePage {
     this.navCtrl.push(EditExperiencePage, {
       experience: exp
     })
+  }
+  removeExperience(id){
+    this.db.deleteExperience(id).subscribe(res => {
+      console.log(res);
+      this.navCtrl.setRoot(TabsPage);
+    })
+    
+
   }
 
 }
