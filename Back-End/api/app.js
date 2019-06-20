@@ -8,8 +8,6 @@ const CONFIG = require('./config');
 
 const app = express();
 
-
-
 /**
  * 
  * MiddleWares
@@ -21,22 +19,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use('/uploads', express.static('uploads'))
 
-
 /**
- * 
  * DB CONNECTION
- * 
  */
+
 db.connect((err) => {
     if (err) throw err;
     console.log('Database Connected Successfully!');
 });
 
-
 /**
- * 
- * ROUTES
- * 
+ ROUTES
  */
 
 const usersRoutes = require('./routes/users');

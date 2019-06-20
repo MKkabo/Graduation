@@ -1,8 +1,16 @@
 page-intro {
     
   
+  
+    
+    img{
+
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
      
-      
+    }
       .slide-title {
       
         text-align: center;
@@ -19,17 +27,19 @@ page-intro {
      
       
       p {
+        font-family: 'Times New Roman', Times, serif;
         padding: 0 40px;
-        font-size: 14px;
-        line-height: 1.5;
+        font-size: 16px;
+        line-height: 1.2;
+        
         
       }
 }
 
-/*
-.content{ 
+
+// .content{ 
         
-        background: url("../assets/img/MK.png") no-repeat;
+//         background: url("../assets/img/start.png") no-repeat;
     
     
-    }*/
+//     }

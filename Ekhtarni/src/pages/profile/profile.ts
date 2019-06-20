@@ -39,10 +39,6 @@ export class profilePage {
       console.log('education', res);
       this.education = res['educations'];
     })
-
-    // this.user = this.db.getUserData();
-    // this.interests = this.user.interests;
-    // console.log('ionViewDidLoad ProfilePage');
   }
 
 

@@ -88,6 +88,15 @@ export class LoginPage {
         this.error = true;
       }
     });
+
+
+
+
+
+
+
+
+    
     // let result = this.db.login(username, password)
     // if (!result.length) {
     //   this.error = true;

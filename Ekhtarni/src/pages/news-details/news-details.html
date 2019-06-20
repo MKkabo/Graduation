@@ -12,10 +12,11 @@
   <ion-card *ngFor="let newsfeed of newsfeeds"> 
     <ion-card-content>
         <ion-item>
-          <img src="http://192.168.1.7:3000/{{ newsfeed.image }}">
+          <img src="http://localhost:3000/{{ newsfeed.image }}">
+          <!-- <img src="http://192.168.8.100:3000/{{ newsfeed.image }}"> -->
           </ion-item>
-    
-     <p  text-wrap>{{ newsfeed.body }}</p>
+        
+    <p  text-wrap>{{ newsfeed.body }}</p>
    
     </ion-card-content>
   </ion-card>
